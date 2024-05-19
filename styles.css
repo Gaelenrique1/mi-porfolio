@@ -1,80 +1,82 @@
+body {
+  background-color: #263238;
+}
 
 .parrafo {
-    
-display: flex;
-
-/*
-el align-items es para alinearlos por ejemplo si esta en end la imagen se va a ver  mas arribita pero si esta en center se va a ver alineado el texto
-*/
+  display: flex;
   align-items: center;
 }
+
 img {
-    margin-left:10px;
+  margin-left: 10px;
 }
+
 p {
-    text-align: justify;
-    color: white;
+  text-align: justify;
+  color: white;
 }
+
 h1 {
   text-align: center;
-background-color: #00BCD4;
-color: white;
-border: 1px;
-border-radius: 9px;
+  background-color: #00BCD4;
+  color: white;
+  border: 1px;
+  border-radius: 9px;
 }
-    
-@media only screen and (max-width: 635px) {
-   p {
-   font-size: 13px;  
-   }
-  }
 
-  @media only screen and (max-width: 400px) {
-    .parrafo {
+@media only screen and (max-width: 635px) {
+  p {
+    font-size: 13px;  
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .parrafo {
     font-size: 11px;  
-    }
-   }
- 
-  .menu-header {
-    list-style-type: none;
-    display: flex; /* Hace que los elementos li se dispongan en fila */
-    justify-content: flex-end; /* Alinea los elementos hijos a la derecha */
-    padding: 8px;
-    margin: 0px;
+  }
+}
+
+.menu-header {
+  list-style-type: none;
+  display: flex; /* Hace que los elementos li se dispongan en fila */
+  justify-content: flex-end; /* Alinea los elementos hijos a la derecha */
+  padding: 8px;
+  margin: 0px;
 }
 
 .a-de-menu {
-    color: black;
-    text-decoration: none;
-    margin-left: 8px; /* Añade espacio entre los enlaces */
-    cursor: pointer;
-    background-color: #00BCD4;
-    padding: 13px;
- 
-    
-    border-radius: 10px;
-    
-    transition: 0.4s;
-    transition-timing-function: ease-out;
-    transition-property: color;
+  color: black;
+  text-decoration: none;
+  margin-left: 8px; /* Añade espacio entre los enlaces */
+  cursor: pointer;
+  background-color: #00BCD4;
+  padding: 13px;
+  border-radius: 10px;
+  transition: 0.4s;
+  transition-timing-function: ease-out;
+  transition-property: color;
 }
+
 .a-de-menu:hover {
   color: white;
   border: solid white;
   border-width: 2px;
 }
 
-
-body {
-  background-color: #263238;
-}
-.B{
+.B {
   color: black;
 }
 
+.B:hover {
+  color: white;
+  cursor: none;
+  transition: 0.3s;
+}
+
 .container {
-  width: 250px;
-  height: 450px;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
   border: 5px solid #00BCD4; /* Agregamos un borde al contenedor */
   border-radius: 11px; /* Añadimos bordes redondeados al contenedor */
   padding: 15px; /* Añadimos espacio interno al contenedor */
@@ -87,16 +89,30 @@ body {
   color: white;
 }
 
-.B:hover {
-  color: white;
-  cursor: none;
-  transition: 0.3s;
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre el .container y el iframe */
+}
+
+@media only screen and (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
   }
-  @media only screen and (max-width: 400px) {
-    .container {
-      scale: 0.7;
+
+  
+
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    scale: 0.7;
     position: relative;
-      right:  50px;
-      
-    }
-   }
+    right: 50px;
+  }
+}
