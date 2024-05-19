@@ -1,4 +1,5 @@
-.container {
+
+.parrafo {
     
 display: flex;
 
@@ -7,8 +8,8 @@ el align-items es para alinearlos por ejemplo si esta en end la imagen se va a v
 */
   align-items: center;
 }
-.container img {
-    margin-right:10px;
+img {
+    margin-left:10px;
 }
 p {
     text-align: justify;
@@ -29,7 +30,7 @@ border-radius: 9px;
   }
 
   @media only screen and (max-width: 400px) {
-    p {
+    .parrafo {
     font-size: 11px;  
     }
    }
@@ -39,7 +40,7 @@ border-radius: 9px;
     display: flex; /* Hace que los elementos li se dispongan en fila */
     justify-content: flex-end; /* Alinea los elementos hijos a la derecha */
     padding: 8px;
-    margin: 9px;
+    margin: 0px;
 }
 
 .a-de-menu {
@@ -67,3 +68,35 @@ border-radius: 9px;
 body {
   background-color: #263238;
 }
+.B{
+  color: black;
+}
+
+.container {
+  width: 250px;
+  height: 450px;
+  border: 5px solid #00BCD4; /* Agregamos un borde al contenedor */
+  border-radius: 11px; /* Añadimos bordes redondeados al contenedor */
+  padding: 15px; /* Añadimos espacio interno al contenedor */
+  background-color: #163238;
+  margin-bottom: 30px;
+}
+
+.container p {
+  text-align: justify; /* Alineamos el texto a la justificación */
+  color: white;
+}
+
+.B:hover {
+  color: white;
+  cursor: none;
+  transition: 0.3s;
+  }
+  @media only screen and (max-width: 400px) {
+    .container {
+      scale: 0.7;
+    position: relative;
+      right:  50px;
+      
+    }
+   }
